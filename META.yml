@@ -1,11 +1,12 @@
 ---
-abstract: 'Perl extention to do something'
+abstract: 'simple code test in Tesst::Deep'
 author:
   - 'Soh Kitahara <sugarbabe335@gmail.com>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
   Test::More: 0.88
   Test::Requires: 0.06
+  Test::Tester: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
 distribution_type: module
@@ -23,7 +24,10 @@ no_index:
     - t
     - xt
 requires:
+  Exporter::Lite: 0
+  Test::Deep: 0
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
+  repository: git://github.com/soh335/Test-Deep-Cond.git
 version: 0.01

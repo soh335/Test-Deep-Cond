@@ -11,6 +11,13 @@ BEGIN {
         Module::Install::Repository      0.06
         Test::Requires                   0.06
     );
+
+    {
+        $|=1;
+        local *STDOUT;
+        eval qq{use inc::Module::Install; 1;} or push @not_available, 'inc::Module::Install';
+    }
+
     my @not_available;
     while(my($mod, $ver) = splice @devmods, 0, 2) {
         eval qq{use $mod $ver (); 1} or push @not_available, $mod;
@@ -23,6 +30,7 @@ BEGIN {
      }
 }
 use inc::Module::Install;
+$Module::Install::AUTHOR = 0 if $ENV{TRAVIS};
 
 all_from 'lib/Test/Deep/Cond.pm';
 
