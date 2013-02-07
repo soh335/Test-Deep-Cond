@@ -26,9 +26,12 @@ use inc::Module::Install;
 
 all_from 'lib/Test/Deep/Cond.pm';
 
+requires 'Test::Deep';
+requires 'Exporter::Lite';
 
 test_requires 'Test::More'     => '0.88';
 test_requires 'Test::Requires' => '0.06';
+test_requires 'Test::Tester';
 
 auto_set_repository;
 
