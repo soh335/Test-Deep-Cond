@@ -3,7 +3,7 @@ use 5.008_001;
 use strict;
 use warnings;
 
-our $VERSION = 'y';
+our $VERSION = '0.01';
 
 use Test::Deep ();
 use Test::Deep::Cmp;
@@ -46,7 +46,7 @@ Test::Deep::Cond - simple code test in Tesst::Deep
 
 =head1 VERSION
 
-This document describes Test::Deep::Cond version y.
+This document describes Test::Deep::Cond version 0.01.
 
 =head1 SYNOPSIS
 
